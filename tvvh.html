@@ -11,12 +11,14 @@
             padding: 0px;
             box-sizing: border-box;
             font-family: 'open sans',sans-serif;
-        }
-        body{
-            min-height: 100vh;
             background-size: cover;
             background-position: center;  
         }
+        /*body{
+           background-image: url(saarall.png);
+            min-height: 50%;
+           
+        }*/
         .header{
             position: fixed;
             top: 0;
@@ -43,6 +45,9 @@
             text-decoration: none;
             font-weight: 500;
             margin-left: 40px;
+        }
+        .navbar a:hover{
+            color: rgba(42, 59, 125);
         }
         #check{
             display: none;        
@@ -93,13 +98,17 @@
 
             .navbar a{
                 display: block;
-                font-size: 1.1rem;
+                font-size: 20px;
+                font-weight: bold;
                 margin:1.5rem 0;
                 text-align: center;
                 transform: translateY(50px);
                 opacity: 0;
                 transition: .3s ease;
             }
+            .navbar a:hover{
+                color: rgba(42, 59, 125);
+        }
             #check:checked~.navbar a{
                 transform: translateY(0);
                 opacity: 1;
@@ -111,56 +120,84 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            width: 1300px;
-            height: 650px;
+            width: 85%;
+            height: 85%;
             background: #f5f5f5;
-            box-shadow: 0 30px 50px #bdbdbd;         
+            box-shadow: 0 30px 50px #bdbdbd;        
         }
         .container .slide .item{
-            width: 200px;
-            height: 300px;
+            width: 20%;
+            height: 30%;
             position: absolute;
-            top: 50%;
+            top: 60%;
             transform: translate(0, -50%);
             border-radius: 20px;
             box-shadow: 0 30px 50px #505050;
-            background-size: cover;
-            background-position: center;
             display: inline-block;
         }
-        .slide .item:nth-child(1),
         .slide .item:nth-child(2){
             top: 0;
             left: 0;
             transform: translate(0,0);
             border-radius: 0;
             width: 100%;
-            height: 100%;
+            height: 110%;
         }.slide .item:nth-child(3){
-            left:70%
+            left:60%
         }
         .slide .item:nth-child(n+4){
-            left: calc(70% + 220px);
+            left: calc(60% + 22%);
         }
         .item .content{
             position: absolute;
             top: 50%;
-            left:100px;
-            width: 300px;
-            text-align: left;
-            color: rgb(218, 220, 232);
+            left:5%;
+            width: 35%;
+            color: #fff;
             transform: translate(0,-50%);
-            font-family: Arial, Helvetica, sans-serif;
             display: none;
         }
         .slide .item:nth-child(2) .content{
             display: block;            
         }
         .content .name{
-            font-size: 40px;
+            font-size: 190%;
             text-transform: uppercase;
             font-weight: bold;           
         }
+        .content .des{
+            text-align: justify;
+            font-size: 120%;
+        }
+    
+        .footer {
+        background-color:#6c6f81;
+        color: #fff;
+        text-align: center;
+        font-weight: var(--font-semi);
+        margin-top: -1%;
+        padding: 50px;
+        }
+
+        .footer__title {
+        font-size: 2rem;
+        margin-bottom: var(--mb-4);
+        }
+
+        .footer__social {
+        margin-bottom: var(--mb-4);
+        }
+
+        .footer__icon {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0 var(--mb-2);
+        }
+
+        .footer__copy {
+        font-size: var(--smaller-font-size);
+        }
+
     </style>
 </head>
 <body>
@@ -174,15 +211,17 @@
         <nav class="navbar">
             <a href= "biydaalt.html"style="--i:0;"> Нүүр хуудас</a>
             <a href= "muhai.html"style="--i:1;">Тухай</a>
-            <a href= "an,amitan.html"style="--i:2;">Ан, амьтан</a>
-            <a href= "urgamal.html"style="--i:3;"> Ургамал</a>
-            <a href= "holboobarih.html"style="--i:4;">Холбоо барих</a>
+            <a href= "tvvh.html"style="--i:2;">Түүх</a>
+            <a href= "an,amitan.html"style="--i:3;">Ан амьтан</a>
+            <a href= "urgamal.html"style="--i:4;"> Ургамал</a>
+            <a href= "holboobarih.html"style="--i:5;">Холбоо барих</a>
         </nav>
     </header>
 
     <div class="container">    
         <div class="slide">
-            <div class="item" style="background-image: url(uul4.jpg);">
+            <div class="item"></div>
+            <div class="item" style="background-image:url(jzurag3.jpg);">
                 <div class="content">
                     <div class="name">Түүх</div>
                     <div class="des">1958 онд 6-8 баллын хүчтэй газар хөдөлж их оргилын ар хөндийд Улиастай гэдэг устай хөндий байдаг бөгөөд хөндийн эхэнд Тэхийн бондгор хэмээх 
@@ -191,34 +230,18 @@
                         түмэн Оюу, Номин нуур гэж нэрлэдэг билээ.</div>
                 </div>   
             </div>
-            <div class="item" style="background-image: url(jzurag3.jpg);">
-                <div class="content">
-                    <div class="name">Түүх</div>
-                    <div class="des">1958 онд 6-8 баллын хүчтэй газар хөдөлж их оргилын ар хөндийд Улиастай гэдэг устай хөндий байдаг бөгөөд хөндийн эхэнд Тэхийн бондгор хэмээх 
-                        асар өндөр барагцаалаахад их оргилоосоо 500м орчим намхан уул энэ газар хөдөлдөөс болж оргилоосоо бэлээ хүртэл таг дундуураа цуурч хуваагдан 
-                        унаж Улиастайн хөндийн эхийг хөндлөн дарж унасан учир их уулын тэргүүний дунд ихэр хоёр нуур тогтсон гэдэг. Энэ хоёр нуурийг нутгийн ард 
-                        түмэн Оюу, Номин нуур гэж нэрлэдэг билээ.</div>
-                </div>   
-            </div>
-            <div class="item" style="background-image: url(nuur2.jpg);">
-                <div class="content">
-                    <div class="name">Түүх</div>
-                    <div class="des">1958 онд 6-8 баллын хүчтэй газар хөдөлж их оргилын ар хөндийд Улиастай гэдэг устай хөндий байдаг бөгөөд хөндийн эхэнд Тэхийн бондгор хэмээх 
-                        асар өндөр барагцаалаахад их оргилоосоо 500м орчим намхан уул энэ газар хөдөлдөөс болж оргилоосоо бэлээ хүртэл таг дундуураа цуурч хуваагдан 
-                        унаж Улиастайн хөндийн эхийг хөндлөн дарж унасан учир их уулын тэргүүний дунд ихэр хоёр нуур тогтсон гэдэг. Энэ хоёр нуурийг нутгийн ард 
-                        түмэн Оюу, Номин нуур гэж нэрлэдэг билээ.</div>
-                </div>   
-            </div>
-            <div class="item" style="background-image: url(nuur1.jpg);">
-                <div class="content">
-                    <div class="name">Түүх</div>
-                    <div class="des">1958 онд 6-8 баллын хүчтэй газар хөдөлж их оргилын ар хөндийд Улиастай гэдэг устай хөндий байдаг бөгөөд хөндийн эхэнд Тэхийн бондгор хэмээх 
-                        асар өндөр барагцаалаахад их оргилоосоо 500м орчим намхан уул энэ газар хөдөлдөөс болж оргилоосоо бэлээ хүртэл таг дундуураа цуурч хуваагдан 
-                        унаж Улиастайн хөндийн эхийг хөндлөн дарж унасан учир их уулын тэргүүний дунд ихэр хоёр нуур тогтсон гэдэг. Энэ хоёр нуурийг нутгийн ард 
-                        түмэн Оюу, Номин нуур гэж нэрлэдэг билээ.</div>
-                </div>   
-            </div>
+            <div class="item" style="background-image: url(nuur2.jpg);"></div>
+            <div class="item" style="background-image: url(nuur1.jpg);"></div>
         </div>
     </div>
+    <img src="saarall.png" style="width: 100%; height: 770px;" alt="">
+    <footer class="footer">
+        <p class="footer__title">Lkhagva</p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/lamka.lamka.560" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://www.instagram.com/lhamka__1119/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <p class="footer__copy">&#169;  Энэ сайт нь Мандах Их Сургуулийн НББ-МС 3-р курсын Вэб програмчлал хичээлийн бие даалтын зорилгоор хийгдсэн болно.</p>
+    </footer>
 </body>
 </html>
